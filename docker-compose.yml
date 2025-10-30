@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  apache:
+    build: .
+    container_name: cms-apache
+    ports:
+      - "8085:80"          # accessible sur http://localhost:8080
+    restart: unless-stopped
+
